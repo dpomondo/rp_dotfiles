@@ -1,0 +1,12 @@
+# ignored files for ~/.dotfiles repo
+
+# original, installed by zsh itself
+.zshrc.old
+
+# not every function in helper_funcs is needed
+shell/helper_funcs/*
+!shell/helper_funcs/cwd_func.py
+
+# most everything in vim/ is unnecessary
+vim/*
+!vim/vimrc
