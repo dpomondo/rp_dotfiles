@@ -8,6 +8,7 @@ shell/helper_funcs/*
 !shell/helper_funcs/cwd_func.py
 
 shell/antigen.zsh.zwc
+shell/.histfile
 
 # most everything in vim/ is unnecessary
 vim/*
