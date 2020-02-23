@@ -1,11 +1,47 @@
-"   ____   ____  _____  __  __  _____  _  _  ____   _____ / ___
-"  (  _ \ (  _ \(  _  )(  \/  )(  _  )( \( )(  _ \ (  _  ) / __)
-"   )(_) ) )___/ )(_)(  )    (  )(_)(  )  (  )(_) ) )(_)(  \__ \
-"  (____/ (__)  (_____)(_/\/\_)(_____)(_)\_)(____/ (_____) (___/
-"     _  _  ____  __  __  ____   ___
-"    ( \/ )(_  _)(  \/  )(  _ \ / __)
-"     \  /  _)(_  )    (  )   /( (__
-"      \/  (____)(_/\/\_)(_)\_) \___)
+"                          ___           ___           ___     
+"                         /\  \         /\__\         /\  \    
+"                         \:\  \       /:/  /        /::\  \   
+"                          \:\  \     /:/__/        /:/\:\  \  
+"                          /::\  \   /::\  \ ___   /::\~\:\  \ 
+"                         /:/\:\__\ /:/\:\  /\__\ /:/\:\ \:\__\
+"                        /:/  \/__/ \/__\:\/:/  / \:\~\:\ \/__/
+"                       /:/  /           \::/  /   \:\ \:\__\  
+"                       \/__/            /:/  /     \:\ \/__/  
+"                                       /:/  /       \:\__\    
+"                                       \/__/         \/__/    
+"                          ___           ___           ___     
+"                         /\__\         /\  \         /\  \    
+"                        /:/ _/_       /::\  \        \:\  \   
+"                       /:/ /\__\     /:/\:\  \        \:\  \  
+"                      /:/ /:/ _/_   /::\~\:\  \       /::\  \ 
+"                     /:/_/:/ /\__\ /:/\:\ \:\__\     /:/\:\__\
+"                     \:\/:/ /:/  / \:\~\:\ \/__/    /:/  \/__/
+"                      \::/_/:/  /   \:\ \:\__\     /:/  /     
+"                       \:\/:/  /     \:\ \/__/     \/__/      
+"                        \::/  /       \:\__\                  
+"                         \/__/         \/__/                  
+"                          ___           ___           ___     
+"                         /\  \         /\  \         /\__\    
+"                        /::\  \       /::\  \       /:/ _/_   
+"                       /:/\:\  \     /:/\:\  \     /:/ /\__\  
+"                      /:/  \:\  \   /:/  \:\  \   /:/ /:/ _/_ 
+"                     /:/__/ \:\__\ /:/__/ \:\__\ /:/_/:/ /\__\
+"                     \:\  \  \/__/ \:\  \ /:/  / \:\/:/ /:/  /
+"                      \:\  \        \:\  /:/  /   \::/_/:/  / 
+"                       \:\  \        \:\/:/  /     \:\/:/  /  
+"                        \:\__\        \::/  /       \::/  /   
+"                         \/__/         \/__/         \/__/    
+"             ___                       ___           ___           ___     
+"            /\__\          ___        /\__\         /\  \         /\  \    
+"           /:/  /         /\  \      /::|  |       /::\  \       /::\  \   
+"          /:/  /          \:\  \    /:|:|  |      /:/\:\  \     /:/\:\  \  
+"         /:/__/  ___      /::\__\  /:/|:|__|__   /::\~\:\  \   /:/  \:\  \ 
+"         |:|  | /\__\  __/:/\/__/ /:/ |::::\__\ /:/\:\ \:\__\ /:/__/ \:\__\
+"         |:|  |/:/  / /\/:/  /    \/__/~~/:/  / \/_|::\/:/  / \:\  \  \/__/
+"         |:|__/:/  /  \::/__/           /:/  /     |:|::/  /   \:\  \      
+"          \::::/__/    \:\__\          /:/  /      |:|\/__/     \:\  \     
+"           ~~~~         \/__/         /:/  /       |:|  |        \:\__\    
+"                                      \/__/         \|__|         \/__/    
 "
 " Here be some things I tweaked to makes my vim be more
 " likes what I likes and not what it is normally
@@ -30,7 +66,6 @@ endif
 
 set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle
 call vundle#begin()
-" 
 "
 " *****************************************************************************
 " *    The bundles you install will be listed here                            *
@@ -268,7 +303,6 @@ set incsearch           " show search matches as you type
 set showmatch
 nnoremap <CR> :noh<CR><CR>
                         " Toggle off search highlighting
-" 
 "
 " Mouse mouse mouse in the house house house -------------------------------
 set mouse-=a            " First, we kill the mouse in all modes
@@ -280,7 +314,6 @@ set ttyfast             " sends more characters for faster redraws
 "set ttymouse=xterm2     " sets the terminal type for sending mouse codes.
                         " 'xterm2' reports mouse position during dragging.
 " 
-"
 " Filetypes ----------------------------------------------------------------
 syntax enable
 augroup override_filetypedetect
@@ -331,9 +364,12 @@ vnoremap <F1> <ESC>
 " 
 "
 " New mappings & new commands-----------------------------------------------
-"   convert to UPPERCASE
+"   convert whole words to UPPERCASE
 inoremap <C-u> <esc>viwUei
 nnoremap <C-u> viwUe<esc>
+"   CONVERT WHOLE WORDS TO lowercase
+inoremap <C-l> <esc>viwuei
+nnoremap <C-l> viwue<esc>
 "   open .vimrc in a split
 nnoremap <leader>ev :split $MYVIMRC<cr>
 "   auto-wrap words in quotes
@@ -348,7 +384,6 @@ nnoremap <leader>} viw<esc>a}<esc>hbi{<esc>lel
 "   auto-wrap words in square brackets
 nnoremap <leader>[ viw<esc>a]<esc>hbi[<esc>lel
 nnoremap <leader>] viw<esc>a]<esc>hbi[<esc>lel
-" 
 "
 " ----------------------------------------------------------------------------
 "  Abbreviations
@@ -392,7 +427,6 @@ augroup END
 " let g:gruvbox_contrast_light='hard'
 " colorscheme gruvbox
 " highlight LineNr ctermbg=237
-" 
 "
 " -----------------------------------------------------------------------------
 " Individual Themes 
