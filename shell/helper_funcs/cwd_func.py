@@ -7,19 +7,34 @@
 #
 import os
 import sys
+import random
+
+rows, columns = os.popen('stty size', 'r').read().split()
+
+# if using tmux, multiple windows can casue a real smoosh. So
+# let's compensate for that!
+if int(columns) < 120:
+    dir_number = 3
+else:
+    dir_number = 5
 
 here = os.path.abspath(os.getcwd()).split('/')
-if len(here) <= 5:
+# the var `here` will include an empty string after the split, 
+# standing in for the root dir @ `/` -- so we need to subtract one
+if (len(here) - 1) <= dir_number:
     res = os.path.abspath(os.getcwd())
-    # res = os.getcwd()
 else:
-    res = '/'.join(['...', here[-4], here[-3], here[-2], here[-1]])
+    res = "..."
+    for i in range(dir_number - 1, 0, -1):
+        res = res + '/' + here[i * -1]
 
+color = random.randint(10,255)
 # left = "%F{015}[%(?..(%?%))%f %F{54}%K{073}%{$(echo '\e[3m')%}"
 # right = "%{$(echo '\e[23m')%}%k%f %F{073}%t ]%f"
 # left = "%{%F{015}%}[ %{%f%K{115}%}"
-left = "%{%F{015}%}[ %{%f%K{195}%}"
-right = "%{%k%F{015}%} %t ]%{%f%}"
+left = "%{%F{015}%}[ %{%f%K{"+ str(color) + "}%}"
+# right = "%{%k%F{015}%} %t ]%{%f%}"
+right = "%{%k%F{015}%} ]%{%f%}"
 left_ital = "%{\e[3m%}"
 right_ital = "%{\e[23m%}"
 

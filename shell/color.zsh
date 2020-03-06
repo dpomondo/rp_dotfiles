@@ -21,3 +21,4 @@
 
 # set colors for ls long form
 # export LSCOLORS='Fxfxcxdxbxegedabaggacad'
+eval $( dircolors -b ~/.dotfiles/dircolors.zsh )

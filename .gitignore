@@ -9,6 +9,7 @@ shell/helper_funcs/*
 
 shell/antigen.zsh.zwc
 shell/.histfile
+test_dir/*
 
 # most everything in vim/ is unnecessary
 vim/*

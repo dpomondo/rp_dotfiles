@@ -16,4 +16,4 @@ setopt HIST_NO_FUNCTIONS
 HISTFILE=~/.dotfile/shell/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
-HISTCHARS='@^#'                 # let bang be bang
+HISTCHARS='!^#'                 # let bang be bang

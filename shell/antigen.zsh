@@ -11,9 +11,12 @@
 #
 # ANTIGEN_DEFAULT_REPO_URL='https://github.com/robbyrussell/oh-my-zsh.git'
 # ADOTDIR='$HOME/.antigen'
-ANTIGEN_LOG=$HOME/.antigen/antigen.log
+# ANTIGEN_LOG=$HOME/.antigen/antigen.log
 
-source $HOME/.antigen/antigen.zsh
+# source $HOME/.antigen/antigen.zsh
+ANTIGEN_LOG=~/.antigen/antigen.log
+
+source ~/.antigen/antigen.zsh
 
 #   delete ev'ything between these lines
 ### load the oh-my-zsh library
