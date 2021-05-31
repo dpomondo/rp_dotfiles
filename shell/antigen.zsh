@@ -14,9 +14,9 @@
 # ANTIGEN_LOG=$HOME/.antigen/antigen.log
 
 # source $HOME/.antigen/antigen.zsh
-ANTIGEN_LOG=~/.antigen/antigen.log
+# ANTIGEN_LOG=~/.antigen/antigen.log
 
-source ~/.antigen/antigen.zsh
+# source ~/.antigen/antigen.zsh
 
 #   delete ev'ything between these lines
 ### load the oh-my-zsh library
